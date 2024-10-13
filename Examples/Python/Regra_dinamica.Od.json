@@ -1,0 +1,21 @@
+{
+    "Regras": {
+        "Regra-validacao": {
+            "nome": "Validacao de produto",
+            "Descricao": "Verifica se o produto contem quantidade acima de 200.",
+            "condicao": [
+                
+                {
+                    "condicao":"{$Quantidade} >= 200 @int",
+                     "acao":"EstoqueAcima"
+                }
+            ],
+            "documento": {
+                "ruledoc": "valida quais produtos o cliente pode comprar.",
+                "obs": "Isso valida a quantidade em estoque e valor em carteira",
+                "Data": " {$Quantidade} = valor quantidade do item",
+                "Origin": "dominio.Produtos"
+            }
+        }
+    }
+}
